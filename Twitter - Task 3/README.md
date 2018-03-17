@@ -1,4 +1,4 @@
-# For Demo - Files have been hosted at [ranajoydutta.pythonanywhere.com](http:\\ranajoydutta.pythonanywhere.com)
+# For Demo - Files have been hosted at <a href="http://ranajoydutta.pythonanywhere.com/" target="_blank">Demo</a>
 
 ## Steps to run offline :-
 > 1. Install Python 3.6
