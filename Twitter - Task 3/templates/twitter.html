@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Twitter Search</title>
+	<link rel="stylesheet" type="text/css" href="../static/css/style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body alink="green" vlink='#bab1ab' ulink='wheat'>
+	<div id="box">
+		<div id="tweety">
+			<img src="../static/img/tweet.svg">
+		</div>
+		<h2 id="head1" >
+			<a href="https://google.com">g11111</a>
+			<a href="google.com">g3333331</a>
+			<p class="glow">Enter Twitter Handle :
+				<form method="POST" action="{{ url_for('retrieve') }}">
+					<input type="text" name="handle" placeholder="Twitter Handle"></p>
+					<input type="submit" id="btn" value="check"></input><br>
+			</form>
+		</h2>
+		<div>
+			{% if invalid_handle=='0' %}
+				<p  class="p1" >{{f_count|safe}}</p>
+				<p  class="p1" >{{S_count|safe}}</p>
+				<p  class="p1" >{{last_status|safe}}</p>
+			{% else %}
+				<p  class="p2" >{{invalid_handle|safe}}</p>
+			{% endif %}
+		</div>
+	</script>
+	</div>
+</body>
+</html>
