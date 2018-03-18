@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Task 2</title>
+	<link rel="stylesheet" type="text/css" href="../static/style.css">
+	<script src="../static/myscripts.js"></script>
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+	
+
+</head>
+<body onload="javascript:calc()">
+	<div style="width: 70%;float: left;">
+		<h1 style="text-align: center;">Motors</h1>
+		<table border="1" id="motortable">
+			<tr>
+				<th>Motor Number</th>
+				<th>Turn ON Switch</th>
+				<th>Turn OFF Switch</th>
+				<th>Current Speed</th>
+				<th>Speed Change</th>
+			</tr>
+		</table>
+		<button onclick="addRow()">Create Row</button>
+	</div>
+	<div style="width: 30%;float: left;">
+		<h1 style="text-align: center;">Motors Health</h1>
+		<table border="1" id="motort">
+			<tr>
+				<th>Motor Number</th>
+				<th>Motor Health</th>
+				<th>Fix Issues</th>
+			</tr>
+		</table>
+	</div>
+
+	<div class='container' id="qwe">
+     <form>
+        <input type=text size=5 name=proglang id='re'>
+        <a href=# id='process_input'><button class='btn btn-default' id="pa">Submit</button></a>
+     </form>
+    </div>
+    <script type="text/javascript">
+    $(function() {
+         $('div#qwe').bind('click', function() {
+            $.getJSON('/_background_process', {
+              proglang: $('input[name="proglang"]').val(),
+          }, function(data){
+          $("#result").text(data.result);
+          });
+          return false;
+          });
+        });
+    setInterval(function(){ 
+        document.getElementById("qwe").click();
+    }, 1000);
+  </script>
+
+</body>
+</html>
