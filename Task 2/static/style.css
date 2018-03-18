@@ -1,0 +1,64 @@
+body{
+	width: 95%;
+}
+table{
+	text-align: center;
+	width: 95%;
+	margin-bottom: 10px;
+}
+td{
+	text-align: center;
+}
+button{              	
+    height: 35px;
+    cursor: pointer;
+    line-height: 35px;
+    padding: 0 14px;
+    box-shadow: 0 4px 6px rgba(50,50,93,.11), 0 1px 3px rgba(0,0,0,.08);
+    background: #525252;
+    border-radius: 4px;
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: .025em;
+    color: black;
+    border-width: 0px;
+}
+.health{
+	height:35px;
+	width: 35px;
+	border-radius: 50%;
+	margin:auto;
+}
+.on{
+	height: 50px;
+	width: 50px;
+	background-color: green;
+	text-align: center;
+}
+.off{
+	height: 50px;
+	width: 50px;
+	background-color: red;
+	text-align: center;
+}
+.currentspeed{
+	height: 50px;
+	width: 50%;
+	margin:auto; 
+	border: 2px solid red;
+	text-align: center;
+	vertical-align: middle;
+	line-height: 50px;
+}
+.speedchange{
+	float: left;
+	height: 50px;
+	width: 45%;
+	margin-left: 5px;
+	text-align: center;
+}
+.speedchange p{
+	margin-top: 0;
+	padding-top: 15px;
+}
