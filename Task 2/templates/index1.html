@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Calling a Function Repeatedly with setInterval() Method</title>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script type="text/javascript">
+$(function() {
+        $('a#process_input').bind('click', function() {
+        $.getJSON('/_background_process1', {
+          proglang: $('input[name="proglang"]').val(),
+        }, function(data) {
+          $("#result").text(data.result);
+        });
+        return false;
+        });
+      });
+
+setInterval(function(){ 
+    document.getElementById("pa").click();
+}, 1000);
+
+
+</script>
+</head>
+<body>
+    <div class='container'>
+    <h3>Welcome! Which is the best programming language of them all?</h3>
+      <form>
+        <input type=text size=5 name=proglang id=re>
+        <a href=# id='process_input'><button class='btn btn-default' id="pa">Submit</button></a></form>
+    </div>
+</body>
+</html> 

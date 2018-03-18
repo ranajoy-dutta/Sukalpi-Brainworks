@@ -1,6 +1,7 @@
 motorcount = 1;
 motorname = "Motor";
 mid = "csm"+motorcount;
+var ar = [];
 function addRow() {
     var table = document.getElementById("motortable");
     var table1 = document.getElementById("motort");
@@ -108,4 +109,20 @@ function fix(x){
     document.getElementById(t).innerHTML="5"; 
     document.getElementById(h).style.backgroundColor = "green";
   }
+}
+
+
+function calc(){
+  setInterval(function(){   
+  for (var i = 1; i < motorcount; i++) {
+    var t = "csm"+i;
+    var s = document.getElementById(t).innerHTML;
+    ar.push(s);
+  }
+  document.getElementById("re").value = ar;
+  for (var i = 1; i < motorcount; i++) {
+    ar.pop();
+  }
+  console.log(ar);
+  },10);
 }
